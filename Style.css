@@ -1,0 +1,160 @@
+:root {
+    --gold: #D4AF37;
+    --black: #0f0f0f;
+    --white: #ffffff;
+    --gray: #777;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+}
+
+/* NAV */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 8%;
+    position: fixed;
+    width: 100%;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+}
+
+.nav-logo {
+    height: 50px;
+}
+
+.nav-links a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=2000') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    inset: 0;
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-logo {
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+}
+
+.btn {
+    background: var(--gold);
+    padding: 12px 30px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* SECTIONS */
+.section {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.section.light {
+    background: #fafafa;
+}
+
+h2 {
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.sub-text {
+    max-width: 700px;
+    margin: auto;
+    color: var(--gray);
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    padding: 40px;
+    border: 1px solid #eee;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.card:hover {
+    background: var(--gold);
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* PROCESS */
+.process {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.process div {
+    padding: 20px;
+    border-bottom: 2px solid var(--gold);
+}
+
+/* FORM */
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: var(--gold);
+    color: white;
+    border: none;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    color: #aaa;
+    text-align: center;
+    padding: 30px;
+}
