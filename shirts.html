@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auram TexFab | Shirt Manufacturing</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #111;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+/* 🔥 LOGO SIZE CONTROL */
+.logo {
+  width: 140px; /* 👈 CHANGE SIZE */
+  filter: grayscale(100%) brightness(0);
+}
+
+.navbar a {
+  color: #111;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 14px;
+}
+
+/* HERO */
+.hero {
+  height: 60vh;
+  background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.95)),
+              url('https://images.unsplash.com/photo-1603252109303-2751441dd157');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* 🔥 HERO LOGO SIZE */
+.hero-logo {
+  width: 90px; /* 👈 CHANGE SIZE */
+  margin-bottom: 20px;
+  filter: grayscale(100%) brightness(0);
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 400;
+}
+
+.hero p {
+  margin-top: 10px;
+  color: #555;
+}
+
+/* SECTION */
+.section {
+  padding: 70px 8%;
+}
+
+.section h2 {
+  color: #c9a43b;
+  margin-bottom: 20px;
+}
+
+/* CARD */
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  border: 1px solid #eee;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.box {
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  border-color: #c9a43b;
+}
+
+.box h3 {
+  color: #c9a43b;
+  margin-bottom: 10px;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  color: #c9a43b;
+  text-align: left;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn {
+  padding: 12px 30px;
+  background: #c9a43b;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #a8892f;
+}
+
+/* FOOTER */
+footer {
+  background: #f8f8f8;
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <img src="logo.png" class="logo">
+
+  <div>
+    <a href="index.html">Home</a>
+    <a href="tshirt.html">T-Shirts</a>
+    <a href="polo.html">Polos</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <img src="logo.png" class="hero-logo">
+
+    <h1>Shirt Manufacturing</h1>
+    <p>Premium woven shirts for global markets</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="section">
+
+  <!-- FABRIC TYPES -->
+  <div class="card">
+    <h2>Shirt Fabric Types</h2>
+
+    <div class="grid">
+      <div class="box">
+        <h3>Poplin</h3>
+        <p>Smooth and lightweight, ideal for formal shirts.</p>
+      </div>
+
+      <div class="box">
+        <h3>Oxford</h3>
+        <p>Durable fabric with slightly textured weave.</p>
+      </div>
+
+      <div class="box">
+        <h3>Twill</h3>
+        <p>Soft with diagonal weave, wrinkle-resistant.</p>
+      </div>
+
+      <div class="box">
+        <h3>Linen</h3>
+        <p>Breathable and perfect for summer shirts.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- GSM -->
+  <div class="card">
+    <h2>Recommended Fabric Weight</h2>
+
+    <table>
+      <tr>
+        <th>Fabric Weight</th>
+        <th>Quality</th>
+        <th>Usage</th>
+      </tr>
+      <tr>
+        <td>100–130 GSM</td>
+        <td>Lightweight</td>
+        <td>Summer / casual shirts</td>
+      </tr>
+      <tr>
+        <td>130–160 GSM</td>
+        <td>Standard</td>
+        <td>Formal shirts</td>
+      </tr>
+      <tr>
+        <td>160–200 GSM</td>
+        <td>Premium</td>
+        <td>Luxury shirts</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="card">
+    <h2>Shirt Features</h2>
+
+    <div class="grid">
+      <div class="box">
+        <h3>Collar Styles</h3>
+        <p>Spread, button-down, mandarin collars.</p>
+      </div>
+
+      <div class="box">
+        <h3>Cuffs</h3>
+        <p>Single cuff, double cuff options.</p>
+      </div>
+
+      <div class="box">
+        <h3>Buttons</h3>
+        <p>Plastic, metal, or mother-of-pearl buttons.</p>
+      </div>
+
+      <div class="box">
+        <h3>Fit Options</h3>
+        <p>Slim, regular, relaxed fits.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <h2>Manufacture Premium Shirts with Us</h2>
+    <p>Export-quality production for USA, UK & EU</p>
+    <a href="#" class="btn">Request Quote</a>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p><strong>Auram TexFab</strong></p>
+  <p>Email: your@email.com | Phone: +91-XXXXXXXXXX</p>
+</footer>
+
+</body>
+</html>
