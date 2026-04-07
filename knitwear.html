@@ -1,289 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Auram TexFab | Knitwear Manufacturing</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auram TexFab | Knitwear Manufacturing</title>
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-body {
-  background-color: #ffffff;
-  color: #111;
-}
-
-/* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 8%;
-  background: #fff;
-  border-bottom: 1px solid #eee;
-}
-
-/* 🔥 LOGO SIZE CONTROL */
-.logo {
-  width: 140px; /* 👈 CHANGE SIZE */
-  filter: grayscale(100%) brightness(0);
-}
-
-.navbar a {
-  color: #111;
-  text-decoration: none;
-  margin-left: 25px;
-  font-size: 14px;
-}
-
-/* HERO */
-.hero {
-  height: 60vh;
-  background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.95)),
-              url('https://images.unsplash.com/photo-1574180566232-aaad1b5b8450');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-/* 🔥 HERO LOGO SIZE */
-.hero-logo {
-  width: 90px; /* 👈 CHANGE SIZE */
-  margin-bottom: 20px;
-  filter: grayscale(100%) brightness(0);
-}
-
-.hero h1 {
-  font-size: 42px;
-  font-weight: 400;
-}
-
-.hero p {
-  margin-top: 10px;
-  color: #555;
-}
-
-/* SECTION */
-.section {
-  padding: 70px 8%;
-}
-
-.section h2 {
-  color: #c9a43b;
-  margin-bottom: 20px;
-}
-
-/* CARD */
-.card {
-  background: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  border: 1px solid #eee;
-}
-
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.box {
-  border: 1px solid #eee;
-  padding: 20px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.box:hover {
-  transform: translateY(-5px);
-  border-color: #c9a43b;
-}
-
-.box h3 {
-  color: #c9a43b;
-  margin-bottom: 10px;
-}
-
-/* TABLE */
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 12px;
-  border-bottom: 1px solid #eee;
-}
-
-th {
-  color: #c9a43b;
-  text-align: left;
-}
-
-/* CTA */
-.cta {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.btn {
-  padding: 12px 30px;
-  background: #c9a43b;
-  color: #fff;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #a8892f;
-}
-
-/* FOOTER */
-footer {
-  background: #f8f8f8;
-  text-align: center;
-  padding: 25px;
-  margin-top: 40px;
-}
-</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<div class="navbar">
-  <img src="logo.png" class="logo">
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <a href="index.html"><img src="Logo.png" class="nav-logo nav-logo-product" alt="Auram TexFab Logo"></a>
 
-  <div>
-    <a href="index.html">Home</a>
-    <a href="tshirt.html">T-Shirts</a>
-    <a href="polo.html">Polos</a>
-    <a href="shirts.html">Shirts</a>
-    <a href="jackets.html">Jackets</a>
-    <a href="#">Contact</a>
-  </div>
-</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
 
-<!-- HERO -->
-<div class="hero">
-  <div>
-    <img src="logo.png" class="hero-logo">
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#products">Products</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
 
-    <h1>Knitwear Manufacturing</h1>
-    <p>High-quality knitwear production for global markets</p>
-  </div>
-</div>
+  <!-- HERO -->
+  <div class="hero hero-small bg-knitwear light-overlay hero-dark-text">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <img src="Logo.png" class="hero-logo hero-logo-small" alt="Auram TexFab Logo">
 
-<!-- CONTENT -->
-<div class="section">
-
-  <!-- KNIT TYPES -->
-  <div class="card">
-    <h2>Types of Knitwear</h2>
-
-    <div class="grid">
-      <div class="box">
-        <h3>Single Jersey</h3>
-        <p>Lightweight knit used for T-shirts and basics.</p>
-      </div>
-
-      <div class="box">
-        <h3>Rib Knit</h3>
-        <p>Stretchable fabric used for cuffs and collars.</p>
-      </div>
-
-      <div class="box">
-        <h3>Interlock</h3>
-        <p>Thicker and smoother knit for premium garments.</p>
-      </div>
-
-      <div class="box">
-        <h3>Fleece Knit</h3>
-        <p>Soft and warm fabric for sweatshirts and hoodies.</p>
-      </div>
+      <h1>Knitwear Manufacturing</h1>
+      <p>High-quality knitwear production for global markets</p>
     </div>
   </div>
 
-  <!-- GSM -->
-  <div class="card">
-    <h2>Knitwear GSM Guide</h2>
+  <!-- CONTENT -->
+  <div class="section">
 
-    <table>
-      <tr>
-        <th>GSM</th>
-        <th>Category</th>
-        <th>Usage</th>
-      </tr>
-      <tr>
-        <td>140–180</td>
-        <td>Lightweight</td>
-        <td>T-shirts, summer wear</td>
-      </tr>
-      <tr>
-        <td>180–250</td>
-        <td>Medium</td>
-        <td>Polos, casual wear</td>
-      </tr>
-      <tr>
-        <td>250–350</td>
-        <td>Heavyweight</td>
-        <td>Hoodies, sweatshirts</td>
-      </tr>
-    </table>
-  </div>
+    <!-- KNIT TYPES -->
+    <div class="card">
+      <h2>Types of Knitwear</h2>
 
-  <!-- FEATURES -->
-  <div class="card">
-    <h2>Knitwear Features</h2>
+      <div class="grid">
+        <div class="box">
+          <h3>Single Jersey</h3>
+          <p>Lightweight knit used for T-shirts and basics.</p>
+        </div>
 
-    <div class="grid">
-      <div class="box">
-        <h3>Stretchability</h3>
-        <p>Provides comfort and flexibility.</p>
-      </div>
+        <div class="box">
+          <h3>Rib Knit</h3>
+          <p>Stretchable fabric used for cuffs and collars.</p>
+        </div>
 
-      <div class="box">
-        <h3>Breathability</h3>
-        <p>Allows air circulation for comfort.</p>
-      </div>
+        <div class="box">
+          <h3>Interlock</h3>
+          <p>Thicker and smoother knit for premium garments.</p>
+        </div>
 
-      <div class="box">
-        <h3>Durability</h3>
-        <p>Maintains shape after multiple washes.</p>
-      </div>
-
-      <div class="box">
-        <h3>Softness</h3>
-        <p>Comfortable for everyday wear.</p>
+        <div class="box">
+          <h3>Fleece Knit</h3>
+          <p>Soft and warm fabric for sweatshirts and hoodies.</p>
+        </div>
       </div>
     </div>
+
+    <!-- GSM -->
+    <div class="card">
+      <h2>Knitwear GSM Guide</h2>
+
+      <table>
+        <tr>
+          <th>GSM</th>
+          <th>Category</th>
+          <th>Usage</th>
+        </tr>
+        <tr>
+          <td>140–180</td>
+          <td>Lightweight</td>
+          <td>T-shirts, summer wear</td>
+        </tr>
+        <tr>
+          <td>180–250</td>
+          <td>Medium</td>
+          <td>Polos, casual wear</td>
+        </tr>
+        <tr>
+          <td>250–350</td>
+          <td>Heavyweight</td>
+          <td>Hoodies, sweatshirts</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- FEATURES -->
+    <div class="card">
+      <h2>Knitwear Features</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3>Stretchability</h3>
+          <p>Provides comfort and flexibility.</p>
+        </div>
+
+        <div class="box">
+          <h3>Breathability</h3>
+          <p>Allows air circulation for comfort.</p>
+        </div>
+
+        <div class="box">
+          <h3>Durability</h3>
+          <p>Maintains shape after multiple washes.</p>
+        </div>
+
+        <div class="box">
+          <h3>Softness</h3>
+          <p>Comfortable for everyday wear.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+      <h2>Manufacture Premium Knitwear with Us</h2>
+      <p>Export-quality production for USA, UK & EU markets</p>
+      <a href="index.html#contact" class="btn">Request Quote</a>
+    </div>
+
   </div>
 
-  <!-- CTA -->
-  <div class="cta">
-    <h2>Manufacture Premium Knitwear with Us</h2>
-    <p>Export-quality production for USA, UK & EU markets</p>
-    <a href="#" class="btn">Request Quote</a>
-  </div>
+  <!-- FOOTER -->
+  <footer class="footer-light">
+    <p><strong>Auram TexFab</strong></p>
+    <p>© 2026 Global Apparel Manufacturer</p>
+    <p>Email: <a href="mailto:sales@auramtexfab.com">sales@auramtexfab.com</a> | <span class="no-wrap">Phone: +91 95177 71517</span></p>
+  </footer>
 
-</div>
-
-<!-- FOOTER -->
-<footer>
-  <p><strong>Auram TexFab</strong></p>
-  <p>Email: your@email.com | Phone: +91-XXXXXXXXXX</p>
-</footer>
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/919517771517" class="whatsapp" aria-label="Chat on WhatsApp" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  <script src="Script.js"></script>
 
 </body>
+
 </html>
