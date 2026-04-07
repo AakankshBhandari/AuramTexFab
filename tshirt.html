@@ -1,295 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Auram TexFab | T-Shirt Guide</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auram TexFab | T-Shirt Guide</title>
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-body {
-  background-color: #ffffff; /* ✅ WHITE BACKGROUND */
-  color: #111;
-}
-
-/* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 8%;
-  background: #fff;
-  border-bottom: 1px solid #eee;
-}
-
-/* 🔥 LOGO SIZE CONTROL */
-.logo {
-  width: 140px;  /* 👈 CHANGE SIZE HERE */
-  height: auto;
-
-  /* Remove green → neutral luxury */
-  filter: grayscale(100%) brightness(0);
-}
-
-.navbar a {
-  color: #111;
-  text-decoration: none;
-  margin-left: 25px;
-  font-size: 14px;
-}
-
-/* HERO */
-.hero {
-  height: 60vh;
-  background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.95)),
-              url('https://images.unsplash.com/photo-1520975922203-bc0b6b6f6c0b');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-/* 🔥 HERO LOGO SIZE */
-.hero-logo {
-  width: 90px; /* 👈 CHANGE SIZE HERE */
-  margin-bottom: 20px;
-
-  filter: grayscale(100%) brightness(0);
-}
-
-.hero h1 {
-  font-size: 42px;
-  font-weight: 400;
-}
-
-.hero p {
-  margin-top: 10px;
-  color: #555;
-}
-
-/* SECTION */
-.section {
-  padding: 70px 8%;
-}
-
-.section h2 {
-  color: #c9a43b;
-  margin-bottom: 20px;
-}
-
-/* CARD */
-.card {
-  background: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  border: 1px solid #eee;
-}
-
-/* TABLE */
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 12px;
-  border-bottom: 1px solid #eee;
-}
-
-th {
-  color: #c9a43b;
-  text-align: left;
-}
-
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.box {
-  border: 1px solid #eee;
-  padding: 20px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.box:hover {
-  transform: translateY(-5px);
-  border-color: #c9a43b;
-}
-
-.box h3 {
-  color: #c9a43b;
-  margin-bottom: 10px;
-}
-
-/* CTA */
-.cta {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.btn {
-  padding: 12px 30px;
-  background: #c9a43b;
-  color: #fff;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #a8892f;
-}
-
-/* FOOTER */
-footer {
-  background: #f8f8f8;
-  text-align: center;
-  padding: 25px;
-  margin-top: 40px;
-}
-</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<div class="navbar">
-  <img src="logo.png" class="logo">
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <a href="index.html"><img src="Logo.png" class="nav-logo nav-logo-product" alt="Auram TexFab Logo"></a>
 
-  <div>
-    <a href="#">Home</a>
-    <a href="#">Products</a>
-    <a href="#">Contact</a>
-  </div>
-</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
 
-<!-- HERO -->
-<div class="hero">
-  <div>
-    <img src="logo.png" class="hero-logo">
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#products">Products</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
 
-    <h1>T-Shirt Manufacturing Guide</h1>
-    <p>Understanding GSM, fabrics & printing techniques</p>
-  </div>
-</div>
+  <!-- HERO -->
+  <div class="hero hero-small bg-tshirt light-overlay hero-dark-text">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <img src="Logo.png" class="hero-logo hero-logo-small" alt="Auram TexFab Logo">
 
-<!-- CONTENT -->
-<div class="section">
-
-  <!-- GSM -->
-  <div class="card">
-    <h2>Understanding GSM</h2>
-
-    <table>
-      <tr>
-        <th>GSM</th>
-        <th>Type</th>
-        <th>Usage</th>
-      </tr>
-      <tr>
-        <td>120–150</td>
-        <td>Lightweight</td>
-        <td>Summer / Promotions</td>
-      </tr>
-      <tr>
-        <td>160–180</td>
-        <td>Medium</td>
-        <td>Everyday wear</td>
-      </tr>
-      <tr>
-        <td>180–220</td>
-        <td>Premium</td>
-        <td>Fashion brands</td>
-      </tr>
-      <tr>
-        <td>220+</td>
-        <td>Heavyweight</td>
-        <td>Streetwear</td>
-      </tr>
-    </table>
-  </div>
-
-  <!-- MATERIALS -->
-  <div class="card">
-    <h2>Fabric Types</h2>
-
-    <div class="grid">
-      <div class="box">
-        <h3>Cotton</h3>
-        <p>Soft, breathable, ideal for premium garments.</p>
-      </div>
-
-      <div class="box">
-        <h3>Polyester</h3>
-        <p>Durable & moisture-wicking, best for sportswear.</p>
-      </div>
-
-      <div class="box">
-        <h3>Blends</h3>
-        <p>Balanced comfort + durability.</p>
-      </div>
-
-      <div class="box">
-        <h3>Special Fabrics</h3>
-        <p>Bamboo, Lycra, Modal.</p>
-      </div>
+      <h1>T-Shirt Manufacturing Guide</h1>
+      <p>Understanding GSM, fabrics & printing techniques</p>
     </div>
   </div>
 
-  <!-- PRINTING -->
-  <div class="card">
-    <h2>Printing Techniques</h2>
+  <!-- CONTENT -->
+  <div class="section">
 
-    <div class="grid">
-      <div class="box">
-        <h3>Screen Printing</h3>
-        <p>Best for bulk orders.</p>
-      </div>
+    <!-- GSM -->
+    <div class="card">
+      <h2>Understanding GSM</h2>
 
-      <div class="box">
-        <h3>DTG</h3>
-        <p>High-detail prints.</p>
-      </div>
+      <table>
+        <tr>
+          <th>GSM</th>
+          <th>Type</th>
+          <th>Usage</th>
+        </tr>
+        <tr>
+          <td>120–150</td>
+          <td>Lightweight</td>
+          <td>Summer / Promotions</td>
+        </tr>
+        <tr>
+          <td>160–180</td>
+          <td>Medium</td>
+          <td>Everyday wear</td>
+        </tr>
+        <tr>
+          <td>180–220</td>
+          <td>Premium</td>
+          <td>Fashion brands</td>
+        </tr>
+        <tr>
+          <td>220+</td>
+          <td>Heavyweight</td>
+          <td>Streetwear</td>
+        </tr>
+      </table>
+    </div>
 
-      <div class="box">
-        <h3>Heat Transfer</h3>
-        <p>Flexible & fast.</p>
-      </div>
+    <!-- MATERIALS -->
+    <div class="card">
+      <h2>Fabric Types</h2>
 
-      <div class="box">
-        <h3>Sublimation</h3>
-        <p>Best for polyester.</p>
+      <div class="grid">
+        <div class="box">
+          <h3>Cotton</h3>
+          <p>Soft, breathable, ideal for premium garments.</p>
+        </div>
+
+        <div class="box">
+          <h3>Polyester</h3>
+          <p>Durable & moisture-wicking, best for sportswear.</p>
+        </div>
+
+        <div class="box">
+          <h3>Blends</h3>
+          <p>Balanced comfort + durability.</p>
+        </div>
+
+        <div class="box">
+          <h3>Special Fabrics</h3>
+          <p>Bamboo, Lycra, Modal.</p>
+        </div>
       </div>
     </div>
+
+    <!-- PRINTING -->
+    <div class="card">
+      <h2>Printing Techniques</h2>
+
+      <div class="grid">
+        <div class="box">
+          <h3>Screen Printing</h3>
+          <p>Best for bulk orders.</p>
+        </div>
+
+        <div class="box">
+          <h3>DTG</h3>
+          <p>High-detail prints.</p>
+        </div>
+
+        <div class="box">
+          <h3>Heat Transfer</h3>
+          <p>Flexible & fast.</p>
+        </div>
+
+        <div class="box">
+          <h3>Sublimation</h3>
+          <p>Best for polyester.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+      <h2>Work With Auram TexFab</h2>
+      <p>Premium manufacturing for global brands</p>
+      <a href="index.html#contact" class="btn">Request Quote</a>
+    </div>
+
   </div>
 
-  <!-- CTA -->
-  <div class="cta">
-    <h2>Work With Auram TexFab</h2>
-    <p>Premium manufacturing for global brands</p>
-    <a href="#" class="btn">Request Quote</a>
-  </div>
+  <!-- FOOTER -->
+  <footer class="footer-light">
+    <p><strong>Auram TexFab</strong></p>
+    <p>© 2026 Global Apparel Manufacturer</p>
+    <p>Email: <a href="mailto:sales@auramtexfab.com">sales@auramtexfab.com</a> | <span class="no-wrap">Phone: +91 95177 71517</span></p>
+  </footer>
 
-</div>
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/919517771517" class="whatsapp" aria-label="Chat on WhatsApp" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
-<!-- FOOTER -->
-<footer>
-  <p><strong>Auram TexFab</strong></p>
-  <p>Email: your@email.com | Phone: +91-XXXXXXXXXX</p>
-</footer>
+  <script src="Script.js"></script>
 
 </body>
+
 </html>

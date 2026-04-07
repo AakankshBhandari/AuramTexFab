@@ -1,336 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Auram TexFab | Global Apparel Manufacturer</title>
+  <title>Auram TexFab | Global Apparel Manufacturer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<style>
-
-/* ===== GLOBAL ===== */
-:root {
-  --gold: #D4AF37;
-  --black: #0f0f0f;
-  --white: #ffffff;
-  --gray: #777;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  color: var(--black);
-}
-
-/* ===== NAV ===== */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 8%;
-  position: fixed;
-  width: 100%;
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-}
-
-.nav-logo {
-  height: 60px;
-}
-
-.nav-links a {
-  margin-left: 25px;
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-}
-
-.nav-links a:hover {
-  color: var(--gold);
-}
-
-/* ===== HERO ===== */
-.hero {
-  height: 100vh;
-  background: url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=2000') center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-}
-
-.hero-content {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
-.hero-logo {
-  height: 120px;
-  margin-bottom: 20px;
-}
-
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3.5rem;
-}
-
-.btn {
-  background: var(--gold);
-  padding: 12px 30px;
-  color: white;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 20px;
-  border-radius: 30px;
-}
-
-/* ===== SECTION ===== */
-.section {
-  padding: 100px 10%;
-  text-align: center;
-}
-
-.section.light {
-  background: #fafafa;
-}
-
-h2 {
-  color: var(--gold);
-  margin-bottom: 20px;
-}
-
-.sub-text {
-  max-width: 700px;
-  margin: auto;
-  color: var(--gray);
-}
-
-/* ===== GRID ===== */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  padding: 40px;
-  border: 1px solid #eee;
-  transition: 0.3s;
-}
-
-.card:hover {
-  background: var(--gold);
-  color: white;
-  transform: translateY(-5px);
-}
-
-/* ===== PROCESS ===== */
-.process {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.process div {
-  padding: 20px;
-  border-bottom: 2px solid var(--gold);
-}
-
-/* ===== CONTACT ===== */
-.contact-wrapper {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.contact-info {
-  text-align: left;
-}
-
-form {
-  max-width: 400px;
-  width: 100%;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-}
-
-button {
-  width: 100%;
-  padding: 15px;
-  background: var(--gold);
-  color: white;
-  border: none;
-}
-
-/* ===== WHATSAPP ===== */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 15px;
-  border-radius: 50%;
-  text-decoration: none;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  background: black;
-  color: #aaa;
-  text-align: center;
-  padding: 30px;
-}
-
-</style>
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav class="nav">
-  <img src="Logo.png" class="nav-logo">
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="index.html"><img src="Logo.png" class="nav-logo" alt="Auram TexFab Logo"></a>
 
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
-    <a href="#process">Process</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="overlay"></div>
-
-  <div class="hero-content">
-    <img src="Logo.png" class="hero-logo">
-    <h1>Auram TexFab</h1>
-    <p>Premium Apparel Manufacturing for Global Brands</p>
-    <a href="#contact" class="btn">Request Quote</a>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="section">
-  <h2>About Us</h2>
-  <p class="sub-text">
-    Auram TexFab is a premium garment manufacturer based in India,
-    specializing in export-quality apparel for USA, UK & European markets.
-    We combine craftsmanship, scalability, and precision to deliver excellence.
-  </p>
-</section>
-
-<!-- PRODUCTS -->
-<section id="products" class="section light">
-  <h2>Our Products</h2>
-
-  <div class="grid">
-    <div class="card"><a href="tshirt.html">T-Shirts</a></div>
-    <div class="card"><a href="polos.html">Polos</a></div>
-    <div class="card"><a href="shirts.html">Shirts</a></div>
-    <div class="card"><a href="jackets.html">Jackets</a></div>
-    <div class="card"><a href="knitwear.html">Knitwear</a></div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section id="process" class="section">
-  <h2>Our Process</h2>
-
-  <div class="process">
-    <div>Design</div>
-    <div>Sampling</div>
-    <div>Production</div>
-    <div>Quality Check</div>
-    <div>Export</div>
-  </div>
-</section>
-
-<!-- WHY US -->
-<section class="section light">
-  <h2>Why Choose Us</h2>
-
-  <div class="grid">
-    <div class="card">✔ Premium Quality</div>
-    <div class="card">✔ Competitive Pricing</div>
-    <div class="card">✔ Export Expertise</div>
-    <div class="card">✔ Custom Manufacturing</div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section">
-  <h2>Start Your Order</h2>
-
-  <div class="contact-wrapper">
-
-    <div class="contact-info">
-      <h3>Contact Details</h3>
-      <p>Email: sales@auramtexfab.com</p>
-      <p>Phone: +91 95177 71517</p>
-      <p>Location: India (Exports Worldwide)</p>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#about">About</a>
+      <a href="index.html#products">Products</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#contact">Contact</a>
     </div>
+  </nav>
 
-<form action="https://formspree.io/f/xgoprney" method="POST">
+  <!-- HERO -->
+  <section class="hero bg-home">
+    <div class="overlay"></div>
 
-  <input type="text" name="name" placeholder="Your Name" required>
+    <div class="hero-content">
+      <img src="Logo.png" class="hero-logo" alt="Auram TexFab Hero Logo">
+      <h1>Auram TexFab</h1>
+      <p>Premium Apparel Manufacturing for Global Brands</p>
+      <a href="#contact" class="btn">Request Quote</a>
+    </div>
+  </section>
 
-  <input type="email" name="email" placeholder="Business Email" required>
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p class="sub-text">
+      Auram TexFab is a premium garment manufacturer based in India,
+      specializing in export-quality apparel for USA, UK & European markets.
+      We combine craftsmanship, scalability, and precision to deliver excellence.
+    </p>
+  </section>
 
-  <input type="text" name="company" placeholder="Company Name">
+  <!-- PRODUCTS -->
+  <section id="products" class="section light">
+    <h2>Our Products</h2>
 
-  <textarea name="message" placeholder="Your Requirements" required></textarea>
-  <input type="hidden" name="_redirect" value="thankyou.html">
+    <div class="grid">
+      <div class="card link-card"><a href="tshirt.html">T-Shirts</a></div>
+      <div class="card link-card"><a href="polos.html">Polos</a></div>
+      <div class="card link-card"><a href="shirts.html">Shirts</a></div>
+      <div class="card link-card"><a href="jackets.html">Jackets</a></div>
+      <div class="card link-card"><a href="knitwear.html">Knitwear</a></div>
+    </div>
+  </section>
 
-  <!-- Hidden field (important for tracking) -->
-  <input type="hidden" name="source" value="Auram TexFab Website">
+  <!-- PROCESS -->
+  <section id="process" class="section">
+    <h2>Our Process</h2>
 
-  <button type="submit">Send Inquiry</button>
+    <div class="process">
+      <div class="process-step">Design</div>
+      <div class="process-arrow">&#10140;</div>
+      <div class="process-step">Sampling</div>
+      <div class="process-arrow">&#10140;</div>
+      <div class="process-step">Production</div>
+      <div class="process-arrow">&#10140;</div>
+      <div class="process-step">Quality Check</div>
+      <div class="process-arrow">&#10140;</div>
+      <div class="process-step">Export</div>
+    </div>
+  </section>
 
-</form>
+  <!-- WHY US -->
+  <section class="section light">
+    <h2>Why Choose Us</h2>
 
-  </div>
-</section>
+    <div class="grid">
+      <div class="card">✔ Premium Quality</div>
+      <div class="card">✔ Competitive Pricing</div>
+      <div class="card">✔ Export Expertise</div>
+      <div class="card">✔ Custom Manufacturing</div>
+    </div>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <p><strong>Auram TexFab</strong></p>
-  <p>© 2026 Global Apparel Manufacturer</p>
-</footer>
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <h2>Start Your Order</h2>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/919517771517" class="whatsapp">💬</a>
+    <div class="contact-wrapper">
 
-<script>
-// smooth scroll
-document.querySelectorAll("a[href^='#']").forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href"))
-      .scrollIntoView({ behavior: "smooth" });
-  });
-});
-</script>
+      <div class="contact-info">
+        <h3>Contact Details</h3>
+        <p><strong>Email:</strong> sales@auramtexfab.com</p>
+        <p><strong>Phone:</strong> +91 95177 71517</p>
+        <p><strong>Location:</strong> India (Exports Worldwide)</p>
+      </div>
+
+      <form action="https://formspree.io/f/xgoprney" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Business Email" required>
+        <input type="text" name="company" placeholder="Company Name">
+        <textarea name="message" placeholder="Your Requirements" required></textarea>
+
+        <input type="hidden" name="_redirect" value="thankyou.html">
+        <input type="hidden" name="source" value="Auram TexFab Website">
+
+        <button type="submit" class="btn">Send Inquiry</button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-home">
+    <p><strong>Auram TexFab</strong></p>
+    <p>© 2026 Global Apparel Manufacturer</p>
+    <p>
+      Email: <a href="mailto:sales@auramtexfab.com">sales@auramtexfab.com</a> |
+      <span class="no-wrap">Phone: +91 95177 71517</span>
+    </p>
+  </footer>
+
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/919517771517" class="whatsapp" aria-label="Chat on WhatsApp" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="Script.js"></script>
 
 </body>
+
 </html>
