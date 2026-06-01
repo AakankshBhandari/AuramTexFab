@@ -63,6 +63,11 @@ body {
   color: var(--gold);
 }
 
+.nav-links a[href*="catalogue"] {
+  color: var(--gold);
+  font-weight: 600;
+}
+
 .nav-toggle {
   display: none;
   font-size: 24px;
