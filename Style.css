@@ -1102,3 +1102,35 @@ footer p {
   text-align: center;
   padding: 20px;
 }
+
+/* MOBILE OVERRIDES FOR COLLECTION SECTION */
+@media (max-width: 900px) {
+  .collection-cats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .collection-section {
+    padding: 60px 5%;
+  }
+
+  .collection-head h2 {
+    font-size: 2.2rem;
+  }
+
+  .ccat-img-link {
+    flex: 0 0 90px;
+    width: 90px;
+    height: 110px;
+  }
+
+  .ccat-imgs img {
+    width: 90px;
+    height: 110px;
+  }
+}
