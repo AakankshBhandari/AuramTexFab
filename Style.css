@@ -444,7 +444,8 @@ footer p {
   }
 
   .ccat-imgs img {
-    height: 120px;
+    width: 90px;
+    height: 110px;
   }
 
   .nav {
@@ -642,25 +643,63 @@ footer p {
   letter-spacing: 1.5px;
 }
 
+.ccat-link-wrap {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  color: inherit;
+}
+
 .ccat-imgs {
   display: flex;
-  gap: 2px;
+  gap: 12px;
   background: #0a0a0a;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
+  overflow-x: auto;
+  padding: 14px 16px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+}
+
+.ccat-imgs.active {
+  cursor: grabbing;
+}
+
+.ccat-imgs::-webkit-scrollbar {
+  display: none;
+}
+
+.ccat-img-link {
+  flex: 0 0 120px;
+  width: 120px;
+  height: 140px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #fff;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.ccat-img-link:hover {
+  border-color: rgba(212, 175, 55, 0.35);
+  background: #121212;
 }
 
 .ccat-imgs img {
-  flex: 1;
-  height: 160px;
-  object-fit: contain;
-  object-position: bottom center;
-  background: #0a0a0a;
-  padding: 10px 6px 0;
+  width: 120px;
+  height: 140px;
+  object-fit: cover;
+  object-position: center;
+  background: #fff;
+  padding: 0;
   transition: transform 0.4s ease;
+  display: block;
 }
 
 .ccat:hover .ccat-imgs img {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 }
 
 /* ── Product Strip ── */
@@ -683,6 +722,12 @@ footer p {
   overflow-x: auto;
   padding-bottom: 6px;
   scrollbar-width: none;
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
+}
+
+.product-strip.active {
+  cursor: grabbing;
 }
 
 .product-strip::-webkit-scrollbar {
@@ -710,12 +755,12 @@ footer p {
 
 .pstrip-item img {
   width: 100%;
-  height: 145px;
-  object-fit: contain;
+  height: 180px;
+  object-fit: cover;
   object-position: center;
   display: block;
-  background: #0a0a0a;
-  padding: 12px 8px 4px;
+  background: #fff;
+  padding: 0;
 }
 
 .pstrip-item span {
@@ -1056,4 +1101,44 @@ footer p {
   height: 100vh;
   text-align: center;
   padding: 20px;
+}
+
+/* MOBILE OVERRIDES FOR COLLECTION SECTION */
+@media (max-width: 900px) {
+  .collection-cats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .collection-section {
+    padding: 60px 5%;
+  }
+
+  .collection-head h2 {
+    font-size: 2.2rem;
+  }
+
+  .ccat-img-link {
+    flex: 0 0 90px;
+    width: 90px;
+    height: 110px;
+  }
+
+  .ccat-imgs img {
+    width: 90px;
+    height: 110px;
+  }
+  .contact-badges {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .contact-badge {
+    text-align: center;
+  }
 }

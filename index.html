@@ -1,371 +1,543 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auram TexFab | Global Apparel Manufacturer</title>
 
-  <title>Auram TexFab | Global Apparel Manufacturer</title>
+    <link rel="stylesheet" href="Style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
 
-  <link rel="stylesheet" href="Style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
+  <body>
+    <!-- NAV -->
+    <nav class="nav">
+      <a href="index.html"
+        ><img src="Logo.png" class="nav-logo" alt="Auram TexFab Logo"
+      /></a>
 
-<body>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        &#9776;
+      </button>
 
-  <!-- NAV -->
-  <nav class="nav">
-    <a href="index.html"><img src="Logo.png" class="nav-logo" alt="Auram TexFab Logo"></a>
-
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
-
-    <div class="nav-links" id="navLinks">
-      <a href="index.html#about">About</a>
-      <a href="index.html#products">Products</a>
-      <a href="index.html#process">Process</a>
-      <a href="gallery.html">Our Factory</a>
-      <a href="index.html#faq">FAQs</a>
-      <a href="catalogue/index.html">Fabric Library</a>
-      <a href="index.html#contact">Contact</a>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero bg-home">
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-      <img src="Logo.png" class="hero-logo" alt="Auram TexFab Hero Logo">
-      <h1>Auram TexFab</h1>
-      <p>Premium Apparel Sourcing &amp; Production Partner</p>
-      <a href="#contact" class="btn">Request Quote</a>
-    </div>
-  </section>
-
-  <!-- TRUST BAR -->
-  <div class="trust-bar">
-    <div class="trust-bar-item">
-      <strong>8+</strong>
-      <span>Years Exporting</span>
-    </div>
-    <div class="trust-bar-item">
-      <strong>30+</strong>
-      <span>Countries Served</span>
-    </div>
-    <div class="trust-bar-item">
-      <strong>500K+</strong>
-      <span>Units Delivered</span>
-    </div>
-    <div class="trust-bar-item">
-      <strong>100+</strong>
-      <span>Streetwear Brands</span>
-    </div>
-  </div>
-
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <h2>About Us</h2>
-    <p class="sub-text">
-      Auram TexFab is a premium apparel solutions partner based in India,
-      serving the USA, UK, Europe, and global markets with export-quality garments.
-      We bring together craftsmanship, scalability, and precision to deliver excellence at every stage.
-    </p>
-
-    <div class="market-flags">
-      <span class="market-flag">🇺🇸 USA</span>
-      <span class="market-flag">🇬🇧 UK</span>
-      <span class="market-flag">🇩🇪 Germany</span>
-      <span class="market-flag">🇫🇷 France</span>
-      <span class="market-flag">🇦🇺 Australia</span>
-      <span class="market-flag">🇨🇦 Canada</span>
-      <span class="market-flag">🇦🇪 UAE</span>
-    </div>
-  </section>
-
-  <!-- COLLECTION -->
-  <section id="products" class="collection-section">
-    <div class="collection-inner">
-
-      <div class="collection-head">
-        <span class="collection-eyebrow">22+ Fabrics &nbsp;·&nbsp; 100+ Garments &nbsp;·&nbsp; Free Swatches</span>
-        <h2>What We Make</h2>
-        <p class="collection-sub">From streetwear essentials to tailored wovens and home textiles — browse our fabric library and see every option available for your brand.</p>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#about">About</a>
+        <a href="index.html#products">Products</a>
+        <a href="index.html#process">Process</a>
+        <a href="gallery.html">Our Factory</a>
+        <a href="index.html#faq">FAQs</a>
+        <a href="catalogue/index.html">Fabric Library</a>
+        <a href="index.html#contact">Contact</a>
       </div>
+    </nav>
 
-      <div class="collection-cats">
+    <!-- HERO -->
+    <section class="hero bg-home">
+      <div class="overlay"></div>
 
-        <a href="catalogue/index.html" class="ccat">
-          <div class="ccat-top">
-            <span class="ccat-tag">8 Fabrics</span>
-            <h3>Knitted</h3>
-            <p>T-Shirts · Hoodies · Polos · Joggers · Activewear · Knitwear</p>
-            <span class="ccat-cta">Explore fabrics →</span>
+      <div class="hero-content">
+        <img src="Logo.png" class="hero-logo" alt="Auram TexFab Hero Logo" />
+        <h1>Auram TexFab</h1>
+        <p>Premium Apparel Sourcing &amp; Production Partner</p>
+        <a href="#contact" class="btn">Request Quote</a>
+      </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="trust-bar">
+      <div class="trust-bar-item">
+        <strong>8+</strong>
+        <span>Years Exporting</span>
+      </div>
+      <div class="trust-bar-item">
+        <strong>30+</strong>
+        <span>Countries Served</span>
+      </div>
+      <div class="trust-bar-item">
+        <strong>500K+</strong>
+        <span>Units Delivered</span>
+      </div>
+      <div class="trust-bar-item">
+        <strong>100+</strong>
+        <span>Streetwear Brands</span>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2>About Us</h2>
+      <p class="sub-text">
+        Auram TexFab is a premium apparel solutions partner based in India,
+        serving the USA, UK, Europe, and global markets with export-quality
+        garments. We bring together craftsmanship, scalability, and precision to
+        deliver excellence at every stage.
+      </p>
+
+      <div class="market-flags">
+        <span class="market-flag">🇺🇸 USA</span>
+        <span class="market-flag">🇬🇧 UK</span>
+        <span class="market-flag">🇩🇪 Germany</span>
+        <span class="market-flag">🇫🇷 France</span>
+        <span class="market-flag">🇦🇺 Australia</span>
+        <span class="market-flag">🇨🇦 Canada</span>
+        <span class="market-flag">🇦🇪 UAE</span>
+      </div>
+    </section>
+
+    <!-- COLLECTION -->
+    <section id="products" class="collection-section">
+      <div class="collection-inner">
+        <div class="collection-head">
+          <span class="collection-eyebrow"
+            >22+ Fabrics &nbsp;·&nbsp; 100+ Garments &nbsp;·&nbsp; Free
+            Swatches</span
+          >
+          <h2>What We Make</h2>
+          <p class="collection-sub">
+            From streetwear essentials to tailored wovens and home textiles —
+            browse our fabric library and see every option available for your
+            brand.
+          </p>
+        </div>
+
+        <div class="collection-cats">
+          <div class="ccat">
+            <a href="catalogue/index.html#knitted" class="ccat-link-wrap">
+              <div class="ccat-top">
+                <span class="ccat-tag">8 Fabrics</span>
+                <h3>Knitted</h3>
+                <p>
+                  T-Shirts · Hoodies · Polos · Joggers · Activewear · Knitwear
+                </p>
+                <span class="ccat-cta">Explore fabrics →</span>
+              </div>
+            </a>
+            <div class="ccat-imgs">
+              <a href="catalogue/index.html#knitted" class="ccat-img-link"
+                ><img src="catalogue/images/polo.webp" alt="Polo"
+              /></a>
+              <a href="catalogue/index.html#knitted" class="ccat-img-link"
+                ><img src="catalogue/images/hooodie.webp" alt="Hoodie"
+              /></a>
+              <a href="catalogue/index.html#knitted" class="ccat-img-link"
+                ><img
+                  src="catalogue/images/heavyweight_crew_neck.webp"
+                  alt="Crewneck"
+              /></a>
+            </div>
           </div>
-          <div class="ccat-imgs">
-            <img src="catalogue/images/polo.png" alt="Polo">
-            <img src="catalogue/images/hooodie.png" alt="Hoodie">
-            <img src="catalogue/images/heavyweight crew neck.png" alt="Crewneck">
+
+          <div class="ccat">
+            <a href="catalogue/index.html#woven" class="ccat-link-wrap">
+              <div class="ccat-top">
+                <span class="ccat-tag">8 Fabrics</span>
+                <h3>Woven</h3>
+                <p>Shirts · Overshirts · Jackets · Chinos · Cargo · Denim</p>
+                <span class="ccat-cta">Explore fabrics →</span>
+              </div>
+            </a>
+            <div class="ccat-imgs">
+              <a href="catalogue/index.html#woven" class="ccat-img-link"
+                ><img
+                  src="catalogue/images/shirt_oxford.webp"
+                  alt="Oxford Shirt"
+              /></a>
+              <a href="catalogue/index.html#woven" class="ccat-img-link"
+                ><img
+                  src="catalogue/images/overshirt_linen.webp"
+                  alt="Linen Overshirt"
+              /></a>
+              <a href="catalogue/index.html#woven" class="ccat-img-link"
+                ><img
+                  src="catalogue/images/jacket_canvas.webp"
+                  alt="Canvas Jacket"
+              /></a>
+            </div>
           </div>
-        </a>
 
-        <a href="catalogue/index.html" class="ccat">
-          <div class="ccat-top">
-            <span class="ccat-tag">8 Fabrics</span>
-            <h3>Woven</h3>
-            <p>Shirts · Overshirts · Jackets · Chinos · Cargo · Denim</p>
-            <span class="ccat-cta">Explore fabrics →</span>
+          <div class="ccat">
+            <a href="catalogue/index.html#homedecor" class="ccat-link-wrap">
+              <div class="ccat-top">
+                <span class="ccat-tag">6 Fabrics</span>
+                <h3>Home Decor</h3>
+                <p>
+                  Cushions · Curtains · Throws · Table Linen · Towels · Bedding
+                </p>
+                <span class="ccat-cta">Explore fabrics →</span>
+              </div>
+            </a>
+            <div class="ccat-imgs">
+              <a href="catalogue/index.html#homedecor" class="ccat-img-link"
+                ><img
+                  src="catalogue/images/cushion_velvet.webp"
+                  alt="Velvet Cushion"
+              /></a>
+              <a href="catalogue/index.html#homedecor" class="ccat-img-link"
+                ><img
+                  src="catalogue/images/curtain_velvet.webp"
+                  alt="Velvet Curtain"
+              /></a>
+              <a href="catalogue/index.html#homedecor" class="ccat-img-link"
+                ><img
+                  src="catalogue/images/throw_velvet.webp"
+                  alt="Velvet Throw"
+              /></a>
+              <a href="catalogue/index.html#homedecor" class="ccat-img-link"
+                ><img src="catalogue/images/bed_linen.webp" alt="Bed Linen"
+              /></a>
+              <a href="catalogue/index.html#homedecor" class="ccat-img-link"
+                ><img src="catalogue/images/towel_terry.webp" alt="Terry Towel"
+              /></a>
+              <a href="catalogue/index.html#homedecor" class="ccat-img-link"
+                ><img
+                  src="catalogue/images/tablemat_linen.webp"
+                  alt="Linen Tablemat"
+              /></a>
+              <a href="catalogue/index.html#homedecor" class="ccat-img-link"
+                ><img
+                  src="catalogue/images/cushion_felt.webp"
+                  alt="Felt Cushion"
+              /></a>
+              <a href="catalogue/index.html#homedecor" class="ccat-img-link"
+                ><img
+                  src="catalogue/images/pillowcover_velvet.webp"
+                  alt="Velvet Pillowcover"
+              /></a>
+            </div>
           </div>
-          <div class="ccat-imgs">
-            <img src="catalogue/images/shirt_oxford.png" alt="Shirt">
-            <img src="catalogue/images/overshirt_linen.png" alt="Overshirt">
-            <img src="catalogue/images/jacket_canvas.png" alt="Jacket">
+        </div>
+
+        <div class="pstrip-wrap">
+          <div class="pstrip-label">Popular Products</div>
+          <div class="product-strip">
+            <a href="catalogue/index.html" class="pstrip-item"
+              ><img
+                src="catalogue/images/ribknit_tshirt.webp"
+                alt="T-Shirt"
+              /><span>T-Shirt</span></a
+            >
+            <a href="catalogue/index.html" class="pstrip-item"
+              ><img
+                src="catalogue/images/polo_interlock.webp"
+                alt="Polo"
+              /><span>Polo Shirt</span></a
+            >
+            <a href="catalogue/index.html" class="pstrip-item"
+              ><img src="catalogue/images/hooodie.webp" alt="Hoodie" /><span
+                >Hoodie</span
+              ></a
+            >
+            <a href="catalogue/index.html" class="pstrip-item"
+              ><img
+                src="catalogue/images/heavyweight_crew_neck.webp"
+                alt="Crewneck"
+              /><span>Crewneck</span></a
+            >
+            <a href="catalogue/index.html" class="pstrip-item"
+              ><img src="catalogue/images/cargo_twill.webp" alt="Cargo" /><span
+                >Cargo Pants</span
+              ></a
+            >
+            <a href="catalogue/index.html" class="pstrip-item"
+              ><img
+                src="catalogue/images/overshirt_linen.webp"
+                alt="Overshirt"
+              /><span>Overshirt</span></a
+            >
+            <a href="catalogue/index.html" class="pstrip-item"
+              ><img src="catalogue/images/dress.webp" alt="Dress" /><span
+                >Dress</span
+              ></a
+            >
+            <a href="catalogue/index.html" class="pstrip-item"
+              ><img
+                src="catalogue/images/frenchterry_joggers.webp"
+                alt="Joggers"
+              /><span>Joggers</span></a
+            >
+            <a href="catalogue/index.html" class="pstrip-item"
+              ><img
+                src="catalogue/images/jacket_canvas.webp"
+                alt="Jacket"
+              /><span>Jacket</span></a
+            >
+            <a href="catalogue/index.html" class="pstrip-item"
+              ><img
+                src="catalogue/images/loungewear.webp"
+                alt="Loungewear"
+              /><span>Loungewear</span></a
+            >
           </div>
-        </a>
+        </div>
 
-        <a href="catalogue/index.html" class="ccat">
-          <div class="ccat-top">
-            <span class="ccat-tag">6 Fabrics</span>
-            <h3>Home Decor</h3>
-            <p>Cushions · Curtains · Throws · Table Linen · Towels · Bedding</p>
-            <span class="ccat-cta">Explore fabrics →</span>
+        <div class="collection-cta">
+          <a href="catalogue/index.html" class="btn-catalogue">
+            Explore Full Fabric Library
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              width="16"
+              height="16"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <p class="cta-note">
+            22+ fabric types &nbsp;·&nbsp; 100% custom colours &nbsp;·&nbsp;
+            Free swatches
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="section">
+      <h2>Our Process</h2>
+
+      <div class="process">
+        <div class="process-step">Design</div>
+        <div class="process-arrow">&#10140;</div>
+        <div class="process-step">Sampling</div>
+        <div class="process-arrow">&#10140;</div>
+        <div class="process-step">Production</div>
+        <div class="process-arrow">&#10140;</div>
+        <div class="process-step">Quality Check</div>
+        <div class="process-arrow">&#10140;</div>
+        <div class="process-step">Export</div>
+      </div>
+
+      <div class="process-timeline">
+        <div class="timeline-item">
+          <strong>7 Days</strong>
+          <span>Sample Production</span>
+        </div>
+        <div class="timeline-item">
+          <strong>3–4 Weeks</strong>
+          <span>Bulk Production</span>
+        </div>
+        <div class="timeline-item">
+          <strong>No MOQ</strong>
+          <span>Start small, scale fast</span>
+        </div>
+        <div class="timeline-item">
+          <strong>FOB / CIF</strong>
+          <span>Incoterms Available</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="section light">
+      <h2>Why Choose Us</h2>
+
+      <div class="grid">
+        <div class="why-card">
+          <div class="why-icon">🏆</div>
+          <h3>Premium Quality</h3>
+          <p>
+            AQL 2.5 inspection on every order. OEKO-TEX compliant fabrics.
+            Zero-compromise on stitch and finish quality.
+          </p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💰</div>
+          <h3>Competitive Pricing</h3>
+          <p>
+            Transparent FOB pricing with no hidden charges. Significantly lower
+            cost than equivalent EU or US manufacturers.
+          </p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">✈️</div>
+          <h3>Export Expertise</h3>
+          <p>
+            8+ years exporting to 30+ countries. Full export documentation:
+            invoice, packing list, COO, and customs support.
+          </p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🎨</div>
+          <h3>Custom Manufacturing</h3>
+          <p>
+            Private label, custom woven labels, hang tags, branded polybags, and
+            carton markings — all handled in-house.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <h2>Buyer FAQs</h2>
+      <p class="sub-text">Common questions from our international clients</p>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            What is your Minimum Order Quantity (MOQ)?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            We have no minimum order quantity. Whether you're launching a
+            capsule collection or scaling a full streetwear line, we work with
+            you at any volume. Contact us to discuss your needs.
           </div>
-          <div class="ccat-imgs">
-            <img src="catalogue/images/cushion_velvet.png" alt="Cushion">
-            <img src="catalogue/images/curtain_velvet.png" alt="Curtain">
-            <img src="catalogue/images/throw_velvet.png" alt="Throw">
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How long does sampling take?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            We offer free fabric sampling so you can feel the quality before
+            committing to an order. Garment sample production takes 7 days after
+            design and fabric confirmation.
           </div>
-        </a>
-
-      </div>
-
-      <div class="pstrip-wrap">
-        <div class="pstrip-label">Popular Products</div>
-        <div class="product-strip">
-          <a href="catalogue/index.html" class="pstrip-item"><img src="catalogue/images/ribknit tshirt.png" alt="T-Shirt"><span>T-Shirt</span></a>
-          <a href="catalogue/index.html" class="pstrip-item"><img src="catalogue/images/polo interlock.png" alt="Polo"><span>Polo Shirt</span></a>
-          <a href="catalogue/index.html" class="pstrip-item"><img src="catalogue/images/hooodie.png" alt="Hoodie"><span>Hoodie</span></a>
-          <a href="catalogue/index.html" class="pstrip-item"><img src="catalogue/images/heavyweight crew neck.png" alt="Crewneck"><span>Crewneck</span></a>
-          <a href="catalogue/index.html" class="pstrip-item"><img src="catalogue/images/cargo_twill.png" alt="Cargo"><span>Cargo Pants</span></a>
-          <a href="catalogue/index.html" class="pstrip-item"><img src="catalogue/images/overshirt_linen.png" alt="Overshirt"><span>Overshirt</span></a>
-          <a href="catalogue/index.html" class="pstrip-item"><img src="catalogue/images/dress.png" alt="Dress"><span>Dress</span></a>
-          <a href="catalogue/index.html" class="pstrip-item"><img src="catalogue/images/frenchterry_joggers.png" alt="Joggers"><span>Joggers</span></a>
-          <a href="catalogue/index.html" class="pstrip-item"><img src="catalogue/images/jacket_canvas.png" alt="Jacket"><span>Jacket</span></a>
-          <a href="catalogue/index.html" class="pstrip-item"><img src="catalogue/images/loungewear.png" alt="Loungewear"><span>Loungewear</span></a>
-        </div>
-      </div>
-
-      <div class="collection-cta">
-        <a href="catalogue/index.html" class="btn-catalogue">
-          Explore Full Fabric Library
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <p class="cta-note">22+ fabric types &nbsp;·&nbsp; 100% custom colours &nbsp;·&nbsp; Free swatches</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section id="process" class="section">
-    <h2>Our Process</h2>
-
-    <div class="process">
-      <div class="process-step">Design</div>
-      <div class="process-arrow">&#10140;</div>
-      <div class="process-step">Sampling</div>
-      <div class="process-arrow">&#10140;</div>
-      <div class="process-step">Production</div>
-      <div class="process-arrow">&#10140;</div>
-      <div class="process-step">Quality Check</div>
-      <div class="process-arrow">&#10140;</div>
-      <div class="process-step">Export</div>
-    </div>
-
-    <div class="process-timeline">
-      <div class="timeline-item">
-        <strong>7 Days</strong>
-        <span>Sample Production</span>
-      </div>
-      <div class="timeline-item">
-        <strong>3–4 Weeks</strong>
-        <span>Bulk Production</span>
-      </div>
-      <div class="timeline-item">
-        <strong>No MOQ</strong>
-        <span>Start small, scale fast</span>
-      </div>
-      <div class="timeline-item">
-        <strong>FOB / CIF</strong>
-        <span>Incoterms Available</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY US -->
-  <section class="section light">
-    <h2>Why Choose Us</h2>
-
-    <div class="grid">
-      <div class="why-card">
-        <div class="why-icon">🏆</div>
-        <h3>Premium Quality</h3>
-        <p>AQL 2.5 inspection on every order. OEKO-TEX compliant fabrics. Zero-compromise on stitch and finish quality.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">💰</div>
-        <h3>Competitive Pricing</h3>
-        <p>Transparent FOB pricing with no hidden charges. Significantly lower cost than equivalent EU or US manufacturers.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">✈️</div>
-        <h3>Export Expertise</h3>
-        <p>8+ years exporting to 30+ countries. Full export documentation: invoice, packing list, COO, and customs support.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">🎨</div>
-        <h3>Custom Manufacturing</h3>
-        <p>Private label, custom woven labels, hang tags, branded polybags, and carton markings — all handled in-house.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="section">
-    <h2>Buyer FAQs</h2>
-    <p class="sub-text">Common questions from our international clients</p>
-
-    <div class="faq-list">
-
-      <div class="faq-item">
-        <button class="faq-question">
-          What is your Minimum Order Quantity (MOQ)?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          We have no minimum order quantity. Whether you're launching a capsule collection or scaling a full streetwear line, we work with you at any volume. Contact us to discuss your needs.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          How long does sampling take?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          We offer free fabric sampling so you can feel the quality before committing to an order. Garment sample production takes 7 days after design and fabric confirmation.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          What are your payment terms?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          We accept 30% advance via T/T (bank transfer) with the 70% balance payable before shipment. L/C at sight is available for orders above $10,000. PayPal is accepted for sample payments.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          What Incoterms do you offer?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          We ship FOB (Surat / Mumbai port), CIF to your destination port, and Ex-Works from our factory. We work with all major freight forwarders and can help coordinate logistics on your behalf.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Do you offer private label and custom branding?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          Yes. We handle custom woven labels, printed care labels, hang tags, branded polybag printing, and carton markings with your brand details. Full private-label production is available at no extra MOQ.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          What quality standards do you follow?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          We follow AQL 2.5 inspection standards on all bulk orders and use OEKO-TEX compliant fabrics. Pre-shipment inspections by third-party QC agencies (QIMA, Bureau Veritas, SGS) can be arranged at your request.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Which countries do you ship to?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          We ship to the USA, UK, Germany, France, Netherlands, Australia, Canada, UAE, and 25+ other countries. We are experienced in all major international shipping regulations and customs requirements.
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section light">
-    <h2>Start Your Order</h2>
-
-    <div class="contact-wrapper">
-
-      <div class="contact-info">
-        <h3>Contact Details</h3>
-        <p><strong>Email:</strong> sales@auramtexfab.com</p>
-        <p><strong>Phone:</strong> +91 95177 71517</p>
-        <p><strong>Location:</strong> India (Exports Worldwide)</p>
-
-        <div class="contact-badges">
-          <span class="contact-badge">🕐 IST (UTC+5:30)</span>
-          <span class="contact-badge">⚡ Reply within 24 hrs</span>
-          <span class="contact-badge">Mon – Sat</span>
         </div>
 
-        <a href="https://wa.me/919517771517?text=Hi%20Auram%20TexFab%2C%20I%27m%20interested%20in%20placing%20a%20bulk%20order.%20Can%20you%20share%20your%20catalog%20and%20pricing%3F"
-           class="contact-wa-link" target="_blank" rel="noopener">
-          <i class="fa-brands fa-whatsapp"></i> WhatsApp Us Directly
-        </a>
+        <div class="faq-item">
+          <button class="faq-question">
+            What are your payment terms?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            We accept 30% advance via T/T (bank transfer) with the 70% balance
+            payable before shipment. L/C at sight is available for orders above
+            $10,000. PayPal is accepted for sample payments.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What Incoterms do you offer?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            We ship FOB (Surat / Mumbai port), CIF to your destination port, and
+            Ex-Works from our factory. We work with all major freight forwarders
+            and can help coordinate logistics on your behalf.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do you offer private label and custom branding?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes. We handle custom woven labels, printed care labels, hang tags,
+            branded polybag printing, and carton markings with your brand
+            details. Full private-label production is available at no extra MOQ.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What quality standards do you follow?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            We follow AQL 2.5 inspection standards on all bulk orders and use
+            OEKO-TEX compliant fabrics. Pre-shipment inspections by third-party
+            QC agencies (QIMA, Bureau Veritas, SGS) can be arranged at your
+            request.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Which countries do you ship to?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            We ship to the USA, UK, Germany, France, Netherlands, Australia,
+            Canada, UAE, and 25+ other countries. We are experienced in all
+            major international shipping regulations and customs requirements.
+          </div>
+        </div>
       </div>
+    </section>
 
-      <form action="https://formspree.io/f/xgoprney" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Business Email" required>
-        <input type="text" name="company" placeholder="Company Name">
-        <input type="text" name="country" placeholder="Your Country">
-        <textarea name="message" placeholder="Your Requirements (product, quantity, delivery timeline…)" required></textarea>
+    <!-- CONTACT -->
+    <section id="contact" class="section light">
+      <h2>Start Your Order</h2>
 
-        <input type="hidden" name="_redirect" value="thankyou.html">
-        <input type="hidden" name="source" value="Auram TexFab Website">
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <h3>Contact Details</h3>
+          <p><strong>Email:</strong> sales@auramtexfab.com</p>
+          <p><strong>Phone:</strong> +91 95177 71517</p>
+          <p><strong>Location:</strong> India (Exports Worldwide)</p>
 
-        <button type="submit" class="btn">Send Inquiry</button>
-      </form>
+          <div class="contact-badges">
+            <span class="contact-badge">🕐 IST (UTC+5:30)</span>
+            <span class="contact-badge">⚡ Reply within 24 hrs</span>
+            <span class="contact-badge">Mon – Sat</span>
+          </div>
 
-    </div>
-  </section>
+          <a
+            href="https://wa.me/919517771517?text=Hi%20Auram%20TexFab%2C%20I%27m%20interested%20in%20placing%20a%20bulk%20order.%20Can%20you%20share%20your%20catalog%20and%20pricing%3F"
+            class="contact-wa-link"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Us Directly
+          </a>
+        </div>
 
-  <!-- FOOTER -->
-  <footer class="footer-home">
-    <p><strong>Auram TexFab</strong></p>
-    <p>© 2026 Global Apparel Manufacturer</p>
-    <p>
-      Email: <a href="mailto:sales@auramtexfab.com">sales@auramtexfab.com</a> |
-      <span class="no-wrap">Phone: +91 95177 71517</span>
-    </p>
-  </footer>
+        <form action="https://formspree.io/f/xgoprney" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="Business Email"
+            required
+          />
+          <input type="text" name="company" placeholder="Company Name" />
+          <input type="text" name="country" placeholder="Your Country" />
+          <textarea
+            name="message"
+            placeholder="Your Requirements (product, quantity, delivery timeline…)"
+            required
+          ></textarea>
 
-  <!-- WHATSAPP -->
-  <a href="https://wa.me/919517771517" class="whatsapp" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
+          <input type="hidden" name="_redirect" value="thankyou.html" />
+          <input type="hidden" name="source" value="Auram TexFab Website" />
 
-  <script src="Script.js"></script>
+          <button type="submit" class="btn">Send Inquiry</button>
+        </form>
+      </div>
+    </section>
 
-</body>
+    <!-- FOOTER -->
+    <footer class="footer-home">
+      <p><strong>Auram TexFab</strong></p>
+      <p>© 2026 Global Apparel Manufacturer</p>
+      <p>
+        Email:
+        <a href="mailto:sales@auramtexfab.com">sales@auramtexfab.com</a> |
+        <span class="no-wrap">Phone: +91 95177 71517</span>
+      </p>
+    </footer>
 
+    <!-- WHATSAPP -->
+    <a
+      href="https://wa.me/919517771517?text=Hi%20Auram%20TexFab%2C%20I%27m%20interested%20in%20placing%20a%20bulk%20order.%20Can%20you%20share%20your%20catalog%20and%20pricing%3F"
+      class="whatsapp"
+      aria-label="Chat on WhatsApp"
+      target="_blank"
+      rel="noopener"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="Script.js"></script>
+  </body>
 </html>

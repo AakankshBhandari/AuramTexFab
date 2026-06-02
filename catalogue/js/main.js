@@ -317,8 +317,21 @@ function closeProductModalBtn() {
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeProductModalBtn(); closeModalBtn(); } });
 
-/* ─── INIT ──────────────────────────────────────────── */
+/*  INIT  */
 renderCards(DATA.knitted, 'knitted-grid');
 renderCards(DATA.woven, 'woven-grid');
 renderCards(DATA.homedecor, 'homedecor-grid');
 renderAllProducts('allproducts-grid');
+
+/* HANDLE HASH NAVIGATION */
+function handleHash() {
+  const hash = window.location.hash.substring(1);
+  if (['knitted', 'woven', 'homedecor', 'allproducts'].includes(hash)) {
+    const btn = document.querySelector(`.nav-tab[onclick*="'${hash}'"]`);
+    if (btn) showTab(hash, btn);
+  }
+}
+
+window.addEventListener('DOMContentLoaded', handleHash);
+window.addEventListener('hashchange', handleHash);
+handleHash();
