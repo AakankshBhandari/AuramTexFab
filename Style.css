@@ -658,27 +658,17 @@ footer p {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   overflow-x: auto;
   padding: 14px 16px;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(212, 175, 55, 0.4) #0a0a0a;
+  scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
+  cursor: grab;
+}
+
+.ccat-imgs.active {
+  cursor: grabbing;
 }
 
 .ccat-imgs::-webkit-scrollbar {
-  height: 6px;
-}
-
-.ccat-imgs::-webkit-scrollbar-track {
-  background: #0a0a0a;
-}
-
-.ccat-imgs::-webkit-scrollbar-thumb {
-  background: rgba(212, 175, 55, 0.25);
-  border-radius: 10px;
-  transition: background 0.3s;
-}
-
-.ccat-imgs::-webkit-scrollbar-thumb:hover {
-  background: var(--gold);
+  display: none;
 }
 
 .ccat-img-link {
@@ -732,6 +722,12 @@ footer p {
   overflow-x: auto;
   padding-bottom: 6px;
   scrollbar-width: none;
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
+}
+
+.product-strip.active {
+  cursor: grabbing;
 }
 
 .product-strip::-webkit-scrollbar {
