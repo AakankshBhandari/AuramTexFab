@@ -1133,4 +1133,12 @@ footer p {
     width: 90px;
     height: 110px;
   }
+  .contact-badges {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .contact-badge {
+    text-align: center;
+  }
 }
