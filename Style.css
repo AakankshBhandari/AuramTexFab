@@ -444,7 +444,8 @@ footer p {
   }
 
   .ccat-imgs img {
-    height: 120px;
+    width: 90px;
+    height: 110px;
   }
 
   .nav {
@@ -642,25 +643,72 @@ footer p {
   letter-spacing: 1.5px;
 }
 
+.ccat-link-wrap {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  color: inherit;
+}
+
 .ccat-imgs {
   display: flex;
-  gap: 2px;
+  gap: 12px;
   background: #0a0a0a;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
+  overflow-x: auto;
+  padding: 14px 16px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(212, 175, 55, 0.4) #0a0a0a;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ccat-imgs::-webkit-scrollbar {
+  height: 6px;
+}
+
+.ccat-imgs::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+.ccat-imgs::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.25);
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.ccat-imgs::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+.ccat-img-link {
+  display: block;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #0d0d0d;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.ccat-img-link:hover {
+  border-color: rgba(212, 175, 55, 0.35);
+  background: #121212;
 }
 
 .ccat-imgs img {
-  flex: 1;
-  height: 160px;
+  width: 120px;
+  height: 130px;
   object-fit: contain;
   object-position: bottom center;
   background: #0a0a0a;
-  padding: 10px 6px 0;
+  padding: 8px 4px 4px;
   transition: transform 0.4s ease;
+  display: block;
 }
 
 .ccat:hover .ccat-imgs img {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 }
 
 /* ── Product Strip ── */
