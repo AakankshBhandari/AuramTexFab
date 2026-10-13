@@ -1,9 +1,9 @@
 /* GLOBAL */
 :root {
-  --gold: #D4AF37;
+  --gold: #806000;
   --black: #0f0f0f;
   --white: #ffffff;
-  --gray: #777;
+  --gray: #666;
 }
 
 * {
@@ -180,7 +180,7 @@ body {
 }
 
 .btn:hover {
-  background: #a8892f;
+  background: #654c00;
 }
 
 /* SECTION */
@@ -791,7 +791,7 @@ footer p {
 }
 
 .btn-catalogue:hover {
-  background: #a8892f;
+  background: #654c00;
   gap: 16px;
 }
 
