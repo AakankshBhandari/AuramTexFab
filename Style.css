@@ -1,6 +1,7 @@
 /* GLOBAL */
 :root {
-  --gold: #806000;
+  --gold: #D4AF37;
+  --gold-action: #806000;
   --black: #0f0f0f;
   --white: #ffffff;
   --gray: #666;
@@ -62,7 +63,7 @@ body {
 }
 
 .nav-links a[href*="catalogue"] {
-  color: var(--gold);
+  color: var(--gold-action);
   font-weight: 600;
 }
 
@@ -167,7 +168,7 @@ body {
 }
 
 .btn {
-  background: var(--gold);
+  background: var(--gold-action);
   padding: 12px 30px;
   color: white;
   text-decoration: none;
@@ -194,7 +195,7 @@ body {
 }
 
 .section h2 {
-  color: var(--gold);
+  color: var(--gold-action);
   margin-bottom: 20px;
   font-size: 2.2rem;
 }
@@ -243,7 +244,7 @@ body {
 }
 
 .card.link-card:hover {
-  background: var(--gold);
+  background: var(--gold-action);
   transform: translateY(-5px);
 }
 
@@ -266,7 +267,7 @@ body {
 }
 
 .box h3 {
-  color: var(--gold);
+  color: var(--gold-action);
   margin-bottom: 10px;
 }
 
@@ -285,7 +286,7 @@ td {
 }
 
 th {
-  color: var(--gold);
+  color: var(--gold-action);
   font-weight: 600;
 }
 
@@ -311,14 +312,14 @@ th {
 }
 
 .process-step:hover {
-  background: var(--gold);
+  background: var(--gold-action);
   color: white;
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .process-arrow {
-  color: var(--gold);
+  color: var(--gold-action);
   font-size: 24px;
   transition: 0.3s ease;
 }
@@ -384,7 +385,7 @@ textarea {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #25D366;
+  background: #087b3a;
   color: white;
   width: 60px;
   height: 60px;
@@ -779,7 +780,7 @@ footer p {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: var(--gold);
+  background: var(--gold-action);
   color: #fff;
   padding: 14px 40px;
   border-radius: 100px;
@@ -885,7 +886,7 @@ footer p {
 }
 
 .why-card h3 {
-  color: var(--gold);
+  color: var(--gold-action);
   font-size: 17px;
   margin: 0;
 }
@@ -924,7 +925,7 @@ footer p {
 .timeline-item strong {
   display: block;
   font-size: 1.1rem;
-  color: var(--gold);
+  color: var(--gold-action);
   margin-bottom: 4px;
   font-family: 'Playfair Display', serif;
 }
@@ -965,7 +966,7 @@ footer p {
 }
 
 .faq-icon {
-  color: var(--gold);
+  color: var(--gold-action);
   font-size: 22px;
   font-weight: 300;
   transition: transform 0.3s;
@@ -1026,7 +1027,7 @@ footer p {
 }
 
 .contact-wa-link:hover {
-  background: #1aa94f;
+  background: #065b2c;
 }
 
 /* ─── ORDER SPECS (product pages) ────────────────── */
