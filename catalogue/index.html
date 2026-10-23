@@ -32,7 +32,7 @@
   <div class="hero-stats">
     <div class="stat"><div class="stat-num">22+</div><div class="stat-label">Fabric Types</div></div>
     <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Custom Colours</div></div>
-    <div class="stat"><div class="stat-num">Free</div><div class="stat-label">Swatch Samples</div></div>
+    <div class="stat"><div class="stat-num">From $30</div><div class="stat-label">Garment Samples (USD)</div></div>
   </div>
 </header>
 
@@ -40,7 +40,12 @@
 <nav class="nav-wrap" aria-label="Fabric categories">
   <div class="category-nav">
     <div class="nav-brand">Fabric Library</div>
-    <button class="nav-tab active" onclick="showTab('knitted',this)" aria-selected="true">
+    <button class="nav-tab active" onclick="showTab('allproducts',this)" aria-selected="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      All Products
+      <span class="tab-count" id="all-products-count">42</span>
+    </button>
+    <button class="nav-tab" onclick="showTab('knitted',this)" aria-selected="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8 2 5 5 5 8c0 4 3 6 3 10h8c0-4 3-6 3-10 0-3-3-6-7-6z"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
       Knitted Fabrics
       <span class="tab-count">8</span>
@@ -55,19 +60,24 @@
       Home Decor
       <span class="tab-count">6</span>
     </button>
-    <button class="nav-tab" onclick="showTab('allproducts',this)">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-      All Products
-      <span class="tab-count" id="all-products-count">42</span>
-    </button>
   </div>
 </nav>
 
 <!-- ─── MAIN ──────────────────────────────────────────────── -->
 <main class="main">
 
+  <!-- ALL PRODUCTS -->
+  <section id="allproducts" class="section active" aria-label="All Products">
+    <div class="section-header">
+      <div class="section-tag">Browse by product</div>
+      <h2 class="section-title">All Products</h2>
+      <p class="section-desc">Every garment and home item we manufacture — click any product to see which fabrics it can be made in.</p>
+    </div>
+    <div class="product-grid" id="allproducts-grid"></div>
+  </section>
+
   <!-- KNITTED -->
-  <section id="knitted" class="section active" aria-label="Knitted Fabrics">
+  <section id="knitted" class="section" aria-label="Knitted Fabrics">
     <div class="section-header">
       <div class="section-tag">Knitted · Loop construction</div>
       <h2 class="section-title">Knitted Fabrics</h2>
@@ -84,16 +94,6 @@
       <p class="section-desc">Constructed by interlacing warp and weft threads — structured, durable, and perfect for outerwear, bottoms, and tailored pieces.</p>
     </div>
     <div class="fabric-grid" id="woven-grid"></div>
-  </section>
-
-  <!-- ALL PRODUCTS -->
-  <section id="allproducts" class="section" aria-label="All Products">
-    <div class="section-header">
-      <div class="section-tag">Browse by product</div>
-      <h2 class="section-title">All Products</h2>
-      <p class="section-desc">Every garment and home item we manufacture — click any product to see which fabrics it can be made in.</p>
-    </div>
-    <div class="product-grid" id="allproducts-grid"></div>
   </section>
 
   <!-- HOME DECOR -->
@@ -128,7 +128,7 @@
       <div class="products-grid" id="modal-products"></div>
     </div>
     <div class="modal-footer">
-      <div class="footer-note">Free swatch · Custom colours available</div>
+      <div class="footer-note">Garment samples from USD 30 · Free fabric swatches · Custom colours</div>
       <a href="mailto:sales@auramtexfab.com" class="cta-btn">
         Request Sample
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -211,7 +211,7 @@
       <div class="fabric-options-grid" id="pm-fabrics"></div>
     </div>
     <div class="modal-footer">
-      <div class="footer-note">Free swatch · Custom colours available</div>
+      <div class="footer-note">Garment samples from USD 30 · Free fabric swatches · Custom colours</div>
       <a href="mailto:sales@auramtexfab.com" class="cta-btn">
         Request Sample
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
