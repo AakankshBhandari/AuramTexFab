@@ -50,6 +50,28 @@ document.querySelectorAll('a[href^="#"], a[href^="index.html#"]').forEach(anchor
     });
 });
 
+// Track WhatsApp link clicks as a dedicated GA4 event.
+document.addEventListener('click', (event) => {
+    const link = event.target.closest('a[href]');
+    if (!link) return;
+
+    let url;
+    try {
+        url = new URL(link.href, window.location.href);
+    } catch {
+        return;
+    }
+
+    if (!['wa.me', 'api.whatsapp.com', 'web.whatsapp.com'].includes(url.hostname)) return;
+    if (typeof window.gtag !== 'function') return;
+
+    window.gtag('event', 'whatsapp_click', {
+        link_url: url.href,
+        link_text: (link.textContent || link.getAttribute('aria-label') || '').trim(),
+        page_location: window.location.href
+    });
+});
+
 // Drag to Scroll functionality for collections and product strips
 const dragScrollContainers = document.querySelectorAll('.ccat-imgs, .product-strip');
 
@@ -83,11 +105,11 @@ dragScrollContainers.forEach(container => {
         e.preventDefault(); // Prevents image/text highlighting
         const x = e.pageX - container.offsetLeft;
         const walk = (x - startX) * 1.5; // Scroll speed multiplier
-        
+
         if (Math.abs(walk) > 5) {
             isDragging = true;
         }
-        
+
         container.scrollLeft = scrollLeft - walk;
     });
 
@@ -99,7 +121,7 @@ dragScrollContainers.forEach(container => {
         }
     });
 
-    // Touch events for mobile to prevent unwanted link clicks (scrolling is native on mobile via CSS)
+    // Touch events on mobile
     let touchStartX = 0;
     container.addEventListener('touchstart', (e) => {
         isDragging = false;
@@ -118,4 +140,3 @@ dragScrollContainers.forEach(container => {
         el.addEventListener('dragstart', (e) => e.preventDefault());
     });
 });
-
