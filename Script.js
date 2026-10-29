@@ -50,7 +50,7 @@ document.querySelectorAll('a[href^="#"], a[href^="index.html#"]').forEach(anchor
     });
 });
 
-// Track WhatsApp link clicks as a dedicated GA4 event.
+// Track WhatsApp link clicks and send the configured Google Ads conversion event.
 document.addEventListener('click', (event) => {
     const link = event.target.closest('a[href]');
     if (!link) return;
@@ -65,10 +65,27 @@ document.addEventListener('click', (event) => {
     if (!['wa.me', 'api.whatsapp.com', 'web.whatsapp.com'].includes(url.hostname)) return;
     if (typeof window.gtag !== 'function') return;
 
-    window.gtag('event', 'whatsapp_click', {
+    const eventParameters = {
         link_url: url.href,
         link_text: (link.textContent || link.getAttribute('aria-label') || '').trim(),
         page_location: window.location.href
+    };
+
+    window.gtag('event', 'whatsapp_click', eventParameters);
+
+    // Let new-tab links open normally; delay same-tab navigation until the
+    // conversion event is sent or the callback times out.
+    if (link.target === '_blank' || event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) {
+        window.gtag('event', 'conversion_event_contact_2', { event_timeout: 2000 });
+        return;
+    }
+
+    event.preventDefault();
+    window.gtag('event', 'conversion_event_contact_2', {
+        event_callback: () => {
+            window.location = url.href;
+        },
+        event_timeout: 2000
     });
 });
 
